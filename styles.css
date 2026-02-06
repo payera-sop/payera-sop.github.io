@@ -189,7 +189,7 @@ blockquote{font-style:italic;color:#666;border-left:4px solid var(--accent);padd
 }
 
 .whatsapp-btn {
-  background: #25D366;      /* WhatsApp green */
+  background: #D4AF37;      /* WhatsApp green */
   color: white;
   border: none;
   margin-top: 0.75rem;
@@ -197,7 +197,7 @@ blockquote{font-style:italic;color:#666;border-left:4px solid var(--accent);padd
 }
 
 .whatsapp-btn:hover {
-  background: #20b358;
+  background: #D4AF37;
 }
 
 .whatsapp-btn.disabled {
