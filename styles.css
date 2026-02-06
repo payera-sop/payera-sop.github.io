@@ -173,3 +173,35 @@ blockquote{font-style:italic;color:#666;border-left:4px solid var(--accent);padd
     height: 320px;
   }
 }
+/* Product card enhancements */
+.stock-status {
+  font-weight: bold;
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.in-stock {
+  color: #4CAF50; /* green */
+}
+
+.out-of-stock {
+  color: #f44336; /* red */
+}
+
+.whatsapp-btn {
+  background: #25D366;      /* WhatsApp green */
+  color: white;
+  border: none;
+  margin-top: 0.75rem;
+  display: inline-block;
+}
+
+.whatsapp-btn:hover {
+  background: #20b358;
+}
+
+.whatsapp-btn.disabled {
+  background: #aaa;
+  cursor: not-allowed;
+  pointer-events: none;
+}
