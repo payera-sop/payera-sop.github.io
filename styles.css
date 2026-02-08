@@ -7,8 +7,28 @@ body{margin:0;font-family:'Helvetica Neue',Arial,sans-serif;color:#333;backgroun
 nav a{margin-left:1rem;text-decoration:none;color:#444;}
 nav a.active{border-bottom:2px solid var(--accent);}
 .hero{background:var(--accent);color:#fff;text-align:center;padding:4rem 1rem;}
-.btn{display:inline-block;background:#fff;color:#fff;border:1px solid #fff;padding:.6rem 1.2rem;border-radius:4px;text-decoration:none;margin-top:1rem;}
-.btn:hover{background:#f3f3f3;}
+.btn {
+  display: inline-block;
+  background: #fff;                /* white background */
+  color: #D4AF37;                  /* golden text – classic luxury gold */
+  border: 1px solid #D4AF37;       /* golden border to match text */
+  padding: 0.7rem 1.8rem;          /* slightly taller for premium feel */
+  border-radius: 999px;            /* pill shape – elegant & modern */
+  text-decoration: none;
+  font-weight: 500;                /* semi-bold for better readability */
+  transition: all 0.25s ease;
+  min-width: 140px;                /* prevents it from shrinking too much */
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #fffdf9;             /* very subtle off-white hover */
+  color: #c4a02f;                  /* slightly darker gold on hover */
+  border-color: #c4a02f;
+  transform: translateY(-1px);     /* tiny lift effect – feels premium */
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.18);  /* soft golden glow */
+}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1.5rem;}
 .card{background:#fff;border-radius:8px;border:1px solid #eee;padding:1rem;text-align:center;}
 .card img{width:100%;height:300px;object-fit:cover;border-radius:8px;transition: transform 0.3s ease;}
