@@ -205,3 +205,112 @@ blockquote{font-style:italic;color:#666;border-left:4px solid var(--accent);padd
   cursor: not-allowed;
   pointer-events: none;
 }
+/* ───────────────────────────────────────────────
+   Responsive Hamburger Navigation
+   ─────────────────────────────────────────────── */
+
+/* Hide checkbox */
+.nav-toggle {
+  display: none;
+}
+
+/* Hamburger icon styling */
+.hamburger {
+  display: none;                    /* hidden on desktop */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.hamburger span {
+  background: #333;
+  height: 3px;
+  border-radius: 2px;
+  transition: all 0.35s ease;
+}
+
+.nav-toggle:checked + .hamburger span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.nav-toggle:checked + .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle:checked + .hamburger span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Menu list */
+.nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;                        /* desktop spacing between links */
+}
+
+.nav-menu li a {
+  color: #444;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.4rem 0;
+  transition: color 0.2s;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+}
+
+/* Mobile behavior */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    display: none;                  /* hidden by default on mobile */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    border-top: 1px solid #eee;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+    z-index: 9;
+  }
+
+  .nav-toggle:checked ~ .nav-menu {
+    display: flex;
+  }
+
+  .nav-menu li {
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  .nav-menu li a {
+    font-size: 1.25rem;
+    padding: 0.8rem;
+    display: block;
+  }
+
+  /* Make header layout work with logo + hamburger */
+  .site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  .brand {
+    margin: 0;
+  }
+}
