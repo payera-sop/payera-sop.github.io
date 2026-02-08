@@ -18,11 +18,40 @@
     <li><a href="contact.html" class="active">Contact</a></li>
   </ul>
 </nav></div></header>
-<main class="container"><h2>Get in Touch</h2><p>We’d love to hear from you! For orders, collaborations, or wholesale inquiries, please use the form below.</p>
-<form action="https://formspree.io/f/your-id" method="POST" class="contact-form"><label>Name<input type="text" name="name" required></label>
-<label>Email<input type="email" name="_replyto" required></label>
-<label>Message<textarea name="message" rows="5" required></textarea></label>
-<button type="submit" class="btn">Send Message</button></form>
+<main class="container"><h2>Get in Touch</h2><p>We’d love to hear from you! For queries on bulk orders and customized gifts, please use the form below.</p>
+<!-- Replace your current <form> with this -->
+
+<form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+
+  <!-- Hidden field – paste your access key here -->
+  <input type="hidden" name="access_key" value="035fd695-8f64-44fb-80a2-ccdd5c62c70a">
+
+  <!-- Optional: give your form a name (shows in email subject) -->
+  <input type="hidden" name="subject" value="New Contact from Payera Website">
+
+  <!-- Optional: redirect after submit -->
+  <input type="hidden" name="redirect" value="https://yourdomain.com/thank-you.html">
+
+  <!-- Optional: simple anti-spam (honeypot) -->
+  <input type="text" name="_gotcha" style="display:none">
+
+  <label>Name
+    <input type="text" name="name" required>
+  </label>
+
+  <label>Email
+    <input type="email" name="email" required>
+  </label>
+
+  <label>Message
+    <textarea name="message" rows="5" required></textarea>
+  </label>
+
+  <button type="submit" class="btn">Send Message</button>
+</form>
+
+<!-- Keep your fallback email link -->
+
 <p>Or email us directly: <a href="mailto:hello@payera.sop@gmail.com">payera.sop@gmail.com</a></p></main>
 <footer class="site-footer"><div class="container"><p>© <span id="year"></span> Payera </p></div></footer>
 <script>document.getElementById('year').textContent=new Date().getFullYear();</script></body></html>
