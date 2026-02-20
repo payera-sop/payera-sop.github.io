@@ -1,48 +1,74 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title> Payera Candles - About</title><link rel="stylesheet" href="styles.css"><link rel="icon" href="/favicon_32x32.png" type="image/png" /></head>
-<body><header class="site-header"><div class="container"> <a href="index.html" class="brand">
-      <img src="images/logo.png" alt="Payera – Hand-poured Soy Candles" class="logo">
-    </a><nav class="main-nav">
-  <input type="checkbox" id="nav-toggle" class="nav-toggle">
-  <label for="nav-toggle" class="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </label>
-  <ul class="nav-menu">
-    <li><a href="index.html" >Home</a></li>
-    <li><a href="products.html" >Products</a></li>
-    <li><a href="about.html" class="active">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav></div></header>
-<main class="container"><h2>Our Candle Collection</h2><p>All candles are hand-poured in small batches using soy wax, cotton wicks, and natural fragrance oils.</p>
-<div class="grid">
-       <article class="card"><img src="images/candles-materials.png" alt="Rituals & Prayers"></article><h2>Why We Choose These Materials — Quality, Safety & Sustainability</h2>
-       <p>At Payera, every element of our candles is chosen thoughtfully. We want you to enjoy beautiful, long-lasting light without compromise. Here's a closer look at what goes into each jar:</p>
-     <h3>Sustainable Soy Wax</h3>
-      <p>We use 100% natural soy wax, derived from renewable soybeans. Compared to traditional paraffin, soy wax offers several advantages:</p>
-      <ul>
-        <li><strong>Cleaner burn</strong> — minimal soot when wicked and trimmed properly</li>
-        <li><strong>Longer-lasting</strong> — burns slower and more evenly</li>
-        <li><strong>Eco-friendly</strong> — biodegradable and renewable</li>
-        <li><strong>Excellent scent throw</strong> — holds fragrance beautifully</li>
-      </ul>
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>PAYERA Candles — Our Story</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand"><img src="images/logo.png" alt="Payera" class="logo"></a>
+      <nav class="main-nav">
+        <input id="nav-toggle" class="nav-toggle" type="checkbox">
+        <label for="nav-toggle" class="hamburger" aria-hidden="true"><span></span><span></span><span></span></label>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-      <h3>Pure Cotton Wicks</h3>
-      <p>100% natural cotton (lead-free, zinc-free) for safety and clean burning.</p>
+  <main>
+    <!-- static hero with image -->
+    <section class="hero-static container" style="margin-top:1.5rem;">
+      <img src="images/candles-materials.png" alt="Our materials" style="width:100%;height:100%;object-fit:cover;border-radius:10px">
+      <div class="hero-content" style="background:linear-gradient(180deg, rgba(255,255,255,0.25), rgba(255,255,255,0.45));">
+        <div class="inner">
+          <h1>Our Story — Handcrafted with intention</h1>
+          <p>From carefully selected ingredients to mindful small-batch production, PAYERA is rooted in a simple belief: beautiful rituals matter.</p>
+        </div>
+      </div>
+    </section>
 
-      <h3>Responsible Burning & Fire Safety</h3>
-      <p>Follow these guidelines for safe enjoyment:</p>
-      <ul>
-        <li>Trim wick to ¼ inch (6 mm) before each use</li>
-        <li>Never leave burning candle unattended</li>
-        <li>Keep away from flammable objects (min. 30 cm)</li>
-        <li>Place on heat-resistant surface, out of reach of children/pets</li>
-        <li>Avoid drafts</li>
-      </ul>
-</div></main>
-<footer class="site-footer"><div class="container"><p>© <span id="year"></span>Payera</p></div></footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script></body></html>
+    <section class="container" style="padding-top:2rem">
+      <div style="max-width:900px;margin:0 auto">
+        <h2 style="font-family:'Playfair Display',serif">Why we choose natural materials</h2>
+        <p class="small">All candles are hand-poured in small batches using soy wax, cotton wicks, and carefully chosen fragrance blends. Our focus is on a cleaner burn, longer-lasting fragrance, and sustainable choices.</p>
+
+        <div class="grid" style="margin-top:1.25rem">
+          <article class="card">
+            <h3>Sustainable Soy Wax</h3>
+            <p class="small">Soy wax is renewable, biodegradable, and gives a gentle, even burn.</p>
+          </article>
+
+          <article class="card">
+            <h3>Pure Cotton Wicks</h3>
+            <p class="small">Lead-free cotton wicks for safety and a clean burn.</p>
+          </article>
+
+          <article class="card">
+            <h3>Responsible Craftsmanship</h3>
+            <p class="small">Small-batch production preserves quality and attention to detail.</p>
+          </article>
+        </div>
+
+        <h3 style="margin-top:1.5rem">Safety &care</h3>
+        <ul class="small">
+          <li>Trim wick to ¼ inch before each burn</li>
+          <li>Place on heat-resistant surface away from drafts</li>
+          <li>Never leave a burning candle unattended</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><p>© <span id="year"></span> PAYERA</p></div></footer>
+
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
