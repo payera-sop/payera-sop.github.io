@@ -125,29 +125,56 @@ body{
 
 /* Grid / cards */
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin-top:1.2rem}
-.card{
-  background:var(--card);
-  border-radius:12px;
-  border:1px solid rgba(0,0,0,0.04);
-  padding:1rem;
-  text-align:center;
-  transition:transform .25s ease, box-shadow .25s;
-}
-.card img {
-  width: 100%;
-  height: auto;     /* Keeps uniform height */
-  object-fit: cotain;
-  border-radius: 10px;             /* fixed, consistent height */           /* fills frame neatly, mild crop */
-  object-position: center;      /* keeps focus centered */
-  margin-bottom: 1rem;
-  background-color: #fffdf9;    /* subtle warm backdrop */
-  box-shadow: 0 3px 12px rgba(0,0,0,0.06); /* light depth */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.06);
+  overflow: hidden;               /* important – prevents image overflow & gives clean rounded corners */
+  padding: 0;                     /* remove padding from card → control spacing inside */
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
 }
 
-.card:hover img {
-  transform: scale(1.02);
-  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 260px;                  /* ← fixed height – most common premium candle product look */
+  object-fit: cover;              /* crops smartly to fill space beautifully */
+  object-position: center;
+  display: block;                 /* removes unwanted bottom gap */
+  background: #fdfaf6;            /* very warm off-white fallback */
+}
+
+.card .content {
+  padding: 1.25rem 1.25rem 1.5rem;   /* generous but not excessive */
+}
+
+/* Optional: better spacing for multi-line text */
+.card h3 {
+  margin: 0 0 0.6rem 0;
+  font-size: 1.25rem;
+  color: #2d1e12;
+}
+
+.card p {
+  margin: 0 0 1rem 0;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+/* Price emphasis (recommended) */
+.card .price {
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 1.1rem;
+  margin: 0.4rem 0 1.2rem;
+}adow: 0 8px 22px rgba(0,0,0,0.08);
 }
 
 /* Forms */
