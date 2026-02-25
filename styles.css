@@ -135,7 +135,7 @@ body{
 }
 .card img {
   width: 100%;
-  aspect-ratio: 4 / 3;     /* Keeps uniform height */
+  height: auto;     /* Keeps uniform height */
   object-fit: cover;
   border-radius: 10px;             /* fixed, consistent height */           /* fills frame neatly, mild crop */
   object-position: center;      /* keeps focus centered */
