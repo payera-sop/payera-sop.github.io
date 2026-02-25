@@ -143,8 +143,8 @@ body{
 
 .card img {
   width: 100%;
-  height: 260px;                  /* ← fixed height – most common premium candle product look */
-  object-fit: cover;              /* crops smartly to fill space beautifully */
+  height: 290px;                  /* ← fixed height – most common premium candle product look */
+  object-fit: contain;              /* crops smartly to fill space beautifully */
   object-position: center;
   display: block;                 /* removes unwanted bottom gap */
   background: #fdfaf6;            /* very warm off-white fallback */
