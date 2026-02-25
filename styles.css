@@ -136,7 +136,7 @@ body{
 .card img {
   width: 100%;
   height: auto;     /* Keeps uniform height */
-  object-fit: cover;
+  object-fit: cotain;
   border-radius: 10px;             /* fixed, consistent height */           /* fills frame neatly, mild crop */
   object-position: center;      /* keeps focus centered */
   margin-bottom: 1rem;
